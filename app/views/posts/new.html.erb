@@ -1,0 +1,7 @@
+<%= form_with model: @post do |f| %>
+  <%= f.label :"もし" %>
+  <%= f.text_field :if %>
+  <%= f.label :"その時" %>
+  <%= f.text_field :then %>
+  <%= f.submit "投稿", class: "btn btn-primary" %>
+<% end %>
