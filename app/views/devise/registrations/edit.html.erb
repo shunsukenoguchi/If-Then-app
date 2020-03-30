@@ -26,6 +26,9 @@
           <%= f.submit "変更する", class: "btn btn-primary" %>
         <% end %>
       </div>
+      <% if user_signed_in? %>
+      <%= link_to "サインアウト", destroy_user_session_path, method: :delete %>
+      <% end %>
     </div>
   </div>
 </div>

@@ -1,6 +1,5 @@
 .header {
     background-color: #50b8fd;
-    // height: 40px;
     line-height: 45px;
 }
 
@@ -11,4 +10,9 @@
     top: 0;
     text-align: center;
     margin: auto;
+    color: #fff;
+}
+
+.navbar-brand-center:hover {
+    color: rgb(206, 204, 204);
 }

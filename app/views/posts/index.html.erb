@@ -1,6 +1,24 @@
-<p>このページは仮のトップページです。</p>
-<%= link_to "仮のボタンです", "#", class: "btn btn-primary" %>
-<% if user_signed_in? %>
-<%= link_to "サインアウト", destroy_user_session_path, method: :delete %>
+<% num = 0%>
+<div class='row'>
+<% @posts.each do |post| %>
+  <% if current_user.id == post.user_id %>
+      <% num+=1%>
+      <div class='col-sm-6'>
+
+      <div class="list-group">
+        <%= link_to num, edit_post_path(post.id), class: "list-group-item list-group-item-action active text-center list-color"%>
+        <div class="list-group-item">
+          もし　　　<span><%= post.if %></span>
+        </div>
+        <div class="list-group-item">
+          その時　　<span><%= post.then %></span>
+        </div>
+      </div>
+      </div>
+  <% end %>
 <% end %>
+<a  href="/posts/new" class='add-btn'>
+  <i class="fas fa-plus"></i>
+</a>
+</div>
 
