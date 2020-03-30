@@ -11,14 +11,8 @@ class PostsController < ApplicationController
   end
   def create
     @post = Post.new(post_params)
-    if @post.present?
-      @post.save
-      redirect_to root_path
-      flash[:notice] = "追加されました"
-    else
-      redirect_to root_path
-      flash[:alert] = "追加に失敗しました"
-    end
+    @post.save
+    redirect_to  root_path
   end
   def edit
     @post = Post.find_by(id: params[:id])
