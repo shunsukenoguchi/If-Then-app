@@ -1,0 +1,11 @@
+==========================
+  <%= @user.name %> 様
+==========================
+<% num = 0 %>
+<% @posts.each do |post|%>
+  <% if @user.email == post.user.email %>
+  
+    |<%= num+=1%>|もし、<%= post.if %>
+        その時、<%= post.then%>
+  <% end %>
+<% end %>
