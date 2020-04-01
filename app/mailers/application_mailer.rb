@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: '[管理メール] if then planning'
+  default from: 'kesunshuchiguno2525@gmail.com'
   layout 'mailer'
 end
