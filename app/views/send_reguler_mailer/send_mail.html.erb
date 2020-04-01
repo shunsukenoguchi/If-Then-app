@@ -11,21 +11,9 @@
     <% @posts.each do |post|%>
       <% if @user.email == post.user.email %>
         <p>|<%= num+=1%>|もし、<%= post.if%><br>
-        &nbsp;&nbsp;&nbsp;&nbsp;その時、その時、<%= post.then%>
+        &nbsp;&nbsp;&nbsp;&nbsp;その時,<%= post.then%>
         </p>
       <% end %>
     <% end %>
   </body>
 </html>
-
-
-
-
-
-
-<% @posts.each do |post|%>
-  <% if @user.email == post.user.email %>
-    <p>|<%= num+=1%>|もし、<%= post.if%></p>
-    <p>その時、<%= post.then%></p>
-  <% end %>
-<% end %>
